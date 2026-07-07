@@ -1632,3 +1632,20 @@ h2 { letter-spacing: -0.025em; }
 .form-recaptcha { flex-basis: 100%; display: flex; justify-content: center; margin-top: var(--space-xs); }
 .clever_form_error { outline: 2px solid #E8A796 !important; outline-offset: 2px; border-radius: 100px; }
 .clever_form_note { flex-basis: 100%; font-size: 0.8rem; color: #F2C4B4; margin-top: -0.4em; }
+
+/* v11 — Footer: Social Icons */
+.footer-social { display: flex; gap: 0.85em; margin-top: var(--space-sm); }
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: var(--ink-soft);
+  background: var(--cream-alt);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.footer-social a:hover,
+.footer-social a:focus-visible { color: var(--white); background: var(--terracotta-deep); }
+.footer-bottom .footer-social { margin-top: 0; }
