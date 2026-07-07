@@ -188,13 +188,31 @@
       var feedback = form.querySelector(".form-feedback") || (form.parentElement && form.parentElement.querySelector(".form-feedback"));
 
       if (hasBackend) {
-        // Real backend (CleverReach) handles validation + submission via its own script.
-        // We only show a friendly success message once the browser accepts the submit.
-        form.addEventListener("submit", function () {
-          var consent = form.querySelector('input[name="consent"]');
-          if (consent && !consent.checked) return; // CleverReach's own validation will block + highlight
+        // Real backend (CleverReach) validates + submits via its own script, into a hidden
+        // iframe — errors returned there are invisible to the user, so we must catch the
+        // obvious failure cases (missing consent, unsolved reCAPTCHA) ourselves beforehand.
+        form.addEventListener("submit", function (e) {
           if (!feedback) return;
-          feedback.classList.remove("is-error");
+          feedback.classList.remove("is-error", "is-success");
+
+          var consent = form.querySelector('input[name="consent"]');
+          var consentLabel = form.querySelector(".form-consent");
+          if (consent && !consent.checked) {
+            e.preventDefault();
+            if (consentLabel) consentLabel.classList.add("is-invalid");
+            feedback.textContent = "Bitte stimme der Speicherung deiner E-Mail-Adresse zu.";
+            feedback.classList.add("is-error", "is-visible");
+            return;
+          }
+          if (consentLabel) consentLabel.classList.remove("is-invalid");
+
+          if (typeof grecaptcha !== "undefined" && !grecaptcha.getResponse().length) {
+            e.preventDefault();
+            feedback.textContent = "Bitte bestätige das reCAPTCHA-Häkchen (\"Ich bin kein Roboter\").";
+            feedback.classList.add("is-error", "is-visible");
+            return;
+          }
+
           feedback.textContent = "Danke! Bitte bestätige die Anmeldung über den Link, den wir dir gerade per E-Mail geschickt haben.";
           feedback.classList.add("is-success", "is-visible");
         });
