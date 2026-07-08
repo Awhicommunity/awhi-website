@@ -1649,3 +1649,136 @@ h2 { letter-spacing: -0.025em; }
 .footer-social a:hover,
 .footer-social a:focus-visible { color: var(--white); background: var(--terracotta-deep); }
 .footer-bottom .footer-social { margin-top: 0; }
+
+/* ============================================================
+   Phase 2 — Plattform-Sneak-Peek (drei Screens als Mockups)
+   ============================================================ */
+.phase-panel--peek.is-active { display: block; }
+.phase-panel--peek .phase-panel-text { max-width: 60ch; margin-bottom: var(--space-lg); }
+
+.peek-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .peek-gallery { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; gap: 26px; }
+}
+
+.peek { display: flex; flex-direction: column; margin: 0; }
+.peek-frame { border-radius: 16px; overflow: hidden; box-shadow: 0 28px 50px -30px rgba(42, 33, 28, 0.4); }
+
+.peek-chrome {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--white); border: 1px solid var(--line); border-bottom: none;
+  padding: 9px 12px;
+}
+.peek-dots { display: inline-flex; gap: 5px; }
+.peek-dots i { width: 8px; height: 8px; border-radius: 50%; background: var(--terracotta-tint); }
+.peek-url {
+  margin-left: 4px; font-family: var(--font-display); font-size: 0.72rem; font-weight: 600;
+  color: var(--ink-faint); background: var(--cream); border-radius: 999px; padding: 3px 12px;
+}
+
+.peek-screen {
+  background: var(--cream); border: 1px solid var(--line); border-top: none;
+  padding: 16px; min-height: 268px;
+}
+.peek-eyebrow {
+  display: block; font-family: var(--font-display);
+  font-size: 0.58rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.peek-eyebrow.accent { color: var(--terracotta-deep); }
+.peek-h {
+  font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em;
+  font-size: 1.02rem; line-height: 1.2; color: var(--ink); margin: 5px 0;
+}
+.peek-sub { font-size: 0.76rem; line-height: 1.45; color: var(--ink-soft); margin: 0 0 12px; }
+
+.peek-cap { margin-top: 14px; font-size: 0.82rem; line-height: 1.45; color: var(--ink-soft); }
+.peek-cap strong {
+  display: block; font-family: var(--font-display); font-weight: 600;
+  font-size: 0.95rem; color: var(--ink); margin-bottom: 2px;
+}
+
+/* Screen 1 — Heute */
+.peek-next {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  background: var(--terracotta-tint); border-radius: 14px; padding: 13px 14px; margin-bottom: 10px;
+}
+.peek-next-text { min-width: 0; }
+.peek-next strong {
+  display: block; font-family: var(--font-display); font-weight: 700;
+  font-size: 0.88rem; color: var(--ink); margin: 4px 0 9px;
+}
+.peek-actions { display: flex; gap: 6px; }
+.peek-btn {
+  font-family: var(--font-display); font-size: 0.66rem; font-weight: 600;
+  background: var(--terracotta-deep); color: var(--cream); border-radius: 999px; padding: 4px 11px;
+}
+.peek-btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.peek-ring { position: relative; width: 54px; height: 54px; flex: none; display: grid; place-items: center; }
+.peek-ring svg { width: 54px; height: 54px; }
+.peek-ring span {
+  position: absolute; font-family: var(--font-display); font-weight: 700;
+  font-size: 0.74rem; color: var(--ink);
+}
+.peek-cardrow { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.peek-card { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 10px 11px; }
+.peek-clabel {
+  display: block; font-family: var(--font-display); font-size: 0.56rem; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px;
+}
+.peek-cbody { font-size: 0.72rem; color: var(--ink-soft); }
+
+/* Screen 2 — Mein Weg */
+.peek-track { display: flex; gap: 6px; margin: 12px 0 15px; }
+.pt-seg { flex: 1; }
+.pt-seg i { display: block; height: 5px; border-radius: 999px; background: var(--cream-alt); }
+.pt-seg.done i, .pt-seg.current i { background: var(--terracotta); }
+.pt-seg span {
+  display: block; font-family: var(--font-display); font-size: 0.58rem; font-weight: 600;
+  color: var(--ink-faint); margin-top: 6px;
+}
+.pt-seg.current span { color: var(--terracotta-deep); }
+.peek-steps { display: flex; flex-direction: column; gap: 8px; }
+.pstep {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 12px;
+  padding: 9px 11px; font-size: 0.76rem; color: var(--ink);
+}
+.pstep-dot {
+  width: 19px; height: 19px; border-radius: 50%; border: 2px solid var(--line); flex: none;
+  display: grid; place-items: center; font-size: 0.62rem; color: var(--cream); position: relative;
+}
+.pstep.done .pstep-dot { background: var(--terracotta); border-color: var(--terracotta); }
+.pstep.done span { color: var(--ink-faint); text-decoration: line-through; text-decoration-color: rgba(42, 33, 28, 0.25); }
+.pstep.current { border-color: var(--terracotta); box-shadow: 0 0 0 3px var(--terracotta-tint); }
+.pstep.current .pstep-dot { border-color: var(--terracotta); }
+.pstep.current .pstep-dot::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--terracotta); }
+
+/* Screen 3 — Checklisten */
+.peek-group {
+  display: block; font-family: var(--font-display); font-size: 0.56rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--terracotta-deep); margin: 11px 0 5px;
+}
+.pcheck { display: flex; align-items: flex-start; gap: 10px; padding: 6px 2px; font-size: 0.76rem; line-height: 1.4; color: var(--ink-soft); }
+.pbox {
+  width: 18px; height: 18px; border-radius: 5px; border: 2px solid var(--line); flex: none;
+  display: grid; place-items: center; font-size: 0.62rem; color: var(--cream); margin-top: 1px;
+}
+.pcheck.done .pbox { background: var(--terracotta); border-color: var(--terracotta); }
+.pcheck.done span { color: var(--ink-faint); text-decoration: line-through; text-decoration-color: rgba(42, 33, 28, 0.25); }
+
+.peek-foot { display: block; margin-top: var(--space-lg); text-align: center; }
+
+/* Gestaffelter Auftritt beim Aktivieren von Phase 2 */
+@keyframes peekIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.phase-panel--peek.is-active .peek { animation: peekIn 0.55s var(--ease-out) both; }
+.phase-panel--peek.is-active .peek:nth-child(2) { animation-delay: 0.09s; }
+.phase-panel--peek.is-active .peek:nth-child(3) { animation-delay: 0.18s; }
+@media (prefers-reduced-motion: reduce) {
+  .phase-panel--peek.is-active .peek { animation: none; }
+}

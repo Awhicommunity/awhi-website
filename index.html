@@ -227,66 +227,100 @@
               <span class="mini-foot">Beispielhafte Darstellung</span>
             </div>
           </div>
-          <!-- Phase 2 (Dashboard) -->
-          <div class="phase-panel" data-panel="1">
+          <!-- Phase 2 (Plattform-Sneak-Peek: drei Screens) -->
+          <div class="phase-panel phase-panel--peek" data-panel="1">
             <div class="phase-panel-text">
               <h3>Die Recovery-Plattform als digitaler Begleiter.</h3>
-              <p>Wir arbeiten mit Hochdruck an der Plattform. Bald wählen wir erste Testnutzer aus, die die Entwicklung aktiv mitgestalten. So könnte dein Begleiter aussehen:</p>
+              <p>Wir arbeiten mit Hochdruck an der Plattform. Bald wählen wir erste Testnutzer aus, die die Entwicklung aktiv mitgestalten. Ein erster Blick auf drei zentrale Bereiche — so könnte dein Begleiter aussehen:</p>
             </div>
-            <div class="dash" data-dash aria-label="Beispielhaftes Dashboard der Awhi-Plattform">
-              <div class="dash-top">
-                <div class="dash-hi">
-                  <span class="dash-avatar" aria-hidden="true">A</span>
-                  <span>
-                    <span class="dash-hi-sub">Guten Morgen</span>
-                    <span class="dash-hi-name">Deine Recovery heute</span>
-                  </span>
-                </div>
-                <span class="dash-pill">Phase: Nachsorge</span>
-              </div>
-              <div class="dash-grid">
-                <div class="dash-card dash-score">
-                  <span class="dash-card-label">Recovery Score</span>
-                  <div class="dash-ring" data-ring>
-                    <svg viewBox="0 0 80 80">
-                      <circle class="ring-bg" cx="40" cy="40" r="32"></circle>
-                      <circle class="ring-fg" cx="40" cy="40" r="32"></circle>
-                    </svg>
-                    <span class="dash-ring-num">78</span>
+
+            <div class="peek-gallery" role="group" aria-label="Beispielhafte Screens der Awhi-Plattform">
+
+              <!-- Screen 1: Heute -->
+              <figure class="peek">
+                <div class="peek-frame">
+                  <div class="peek-chrome" aria-hidden="true">
+                    <span class="peek-dots"><i></i><i></i><i></i></span>
+                    <span class="peek-url">Heute</span>
                   </div>
-                  <span class="dash-card-hint">+6 diese Woche</span>
-                </div>
-                <div class="dash-card dash-journey">
-                  <span class="dash-card-label">Recovery Journey</span>
-                  <div class="dash-steps">
-                    <span class="dash-step done"></span>
-                    <span class="dash-step done"></span>
-                    <span class="dash-step active"></span>
-                    <span class="dash-step"></span>
-                    <span class="dash-step"></span>
-                  </div>
-                  <span class="dash-card-hint">Nächster Schritt: Kompressionskleidung</span>
-                </div>
-                <div class="dash-card dash-community">
-                  <span class="dash-card-label">Community</span>
-                  <div class="dash-avatars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-                  <span class="dash-card-hint">3 neue Beiträge in „Eltern"</span>
-                </div>
-                <div class="dash-card dash-docs">
-                  <span class="dash-card-label">Ärztefinder</span>
-                  <div class="dash-map" aria-hidden="true"><span class="dash-pin"></span><span class="dash-pin"></span></div>
-                  <span class="dash-card-hint">2 Spezialisten in der Nähe</span>
-                </div>
-                <div class="dash-card dash-kiwi">
-                  <span class="dash-card-label">Kiwi</span>
-                  <div class="dash-chat">
-                    <span class="dash-bubble user">Wie pflege ich frische Narben?</span>
-                    <span class="dash-bubble bot" data-typing>Kiwi schreibt …</span>
+                  <div class="peek-screen peek-heute">
+                    <span class="peek-eyebrow">Mittwoch, 8. Juli</span>
+                    <h4 class="peek-h">Guten Morgen, Anna.</h4>
+                    <p class="peek-sub">Ihr seid in der Nachsorge — für Emil zählt heute ein Schritt.</p>
+                    <div class="peek-next">
+                      <div class="peek-next-text">
+                        <span class="peek-eyebrow accent">Euer nächster Schritt</span>
+                        <strong>Kompressionskleidung anpassen</strong>
+                        <span class="peek-actions"><span class="peek-btn">Zum Weg</span><span class="peek-btn ghost">Kiwi fragen</span></span>
+                      </div>
+                      <div class="peek-ring">
+                        <svg viewBox="0 0 44 44" aria-hidden="true">
+                          <circle cx="22" cy="22" r="18" fill="none" stroke="var(--terracotta-tint)" stroke-width="4"></circle>
+                          <circle cx="22" cy="22" r="18" fill="none" stroke="var(--terracotta)" stroke-width="4" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="61" transform="rotate(-90 22 22)"></circle>
+                        </svg>
+                        <span>6/13</span>
+                      </div>
+                    </div>
+                    <div class="peek-cardrow">
+                      <div class="peek-card"><span class="peek-clabel">Checklisten</span><span class="peek-cbody">Packliste &amp; Visite-Fragen</span></div>
+                      <div class="peek-card"><span class="peek-clabel">Community</span><span class="peek-cbody">3 neue Beiträge</span></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <span class="dash-foot">Beispielhafte Darstellung — Funktionen symbolisch</span>
+                <figcaption class="peek-cap"><strong>Dein Tag im Blick</strong>Ein persönlicher Begleiter, der den nächsten Schritt kennt.</figcaption>
+              </figure>
+
+              <!-- Screen 2: Mein Weg -->
+              <figure class="peek">
+                <div class="peek-frame">
+                  <div class="peek-chrome" aria-hidden="true">
+                    <span class="peek-dots"><i></i><i></i><i></i></span>
+                    <span class="peek-url">Mein Weg</span>
+                  </div>
+                  <div class="peek-screen peek-weg">
+                    <span class="peek-eyebrow accent">Recovery-Weg</span>
+                    <h4 class="peek-h">Euer Weg — Schritt für Schritt.</h4>
+                    <div class="peek-track" aria-hidden="true">
+                      <div class="pt-seg done"><i></i><span>Akut</span></div>
+                      <div class="pt-seg done"><i></i><span>Reha</span></div>
+                      <div class="pt-seg current"><i></i><span>Nachsorge</span></div>
+                      <div class="pt-seg"><i></i><span>Alltag</span></div>
+                    </div>
+                    <div class="peek-steps">
+                      <div class="pstep done"><span class="pstep-dot">✓</span><span>Erstversorgung verstehen</span></div>
+                      <div class="pstep done"><span class="pstep-dot">✓</span><span>Reha-Plan durchgehen</span></div>
+                      <div class="pstep current"><span class="pstep-dot"></span><span>Kompressionskleidung anpassen</span></div>
+                      <div class="pstep"><span class="pstep-dot"></span><span>Narbenpflege-Routine aufbauen</span></div>
+                    </div>
+                  </div>
+                </div>
+                <figcaption class="peek-cap"><strong>Der Weg durch jede Phase</strong>Struktur statt Überforderung — ein Leben lang.</figcaption>
+              </figure>
+
+              <!-- Screen 3: Checklisten -->
+              <figure class="peek">
+                <div class="peek-frame">
+                  <div class="peek-chrome" aria-hidden="true">
+                    <span class="peek-dots"><i></i><i></i><i></i></span>
+                    <span class="peek-url">Checklisten</span>
+                  </div>
+                  <div class="peek-screen peek-check">
+                    <span class="peek-eyebrow accent">Checklisten</span>
+                    <h4 class="peek-h">Fragen für die Visite</h4>
+                    <p class="peek-sub">Nach Themen sortiert — antworten &amp; abhaken.</p>
+                    <span class="peek-group">Behandlung &amp; nächste Schritte</span>
+                    <div class="pcheck done"><span class="pbox">✓</span><span>Wie tief ist die Verbrennung?</span></div>
+                    <div class="pcheck done"><span class="pbox">✓</span><span>Welche Behandlung ist als Nächstes geplant?</span></div>
+                    <div class="pcheck"><span class="pbox"></span><span>Steht eine OP an — und wann?</span></div>
+                    <span class="peek-group">Schmerzen &amp; Heilung</span>
+                    <div class="pcheck"><span class="pbox"></span><span>Wie werden Schmerzen behandelt?</span></div>
+                  </div>
+                </div>
+                <figcaption class="peek-cap"><strong>An alles gedacht</strong>Packliste, Visite-Fragen und mehr — abhakbar.</figcaption>
+              </figure>
+
             </div>
+            <span class="dash-foot peek-foot">Beispielhafte Darstellung — Funktionen symbolisch</span>
           </div>
           <!-- Phase 3 -->
           <div class="phase-panel" data-panel="2">
