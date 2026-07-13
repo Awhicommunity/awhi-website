@@ -1650,6 +1650,19 @@ h2 { letter-spacing: -0.025em; }
 .footer-social a:focus-visible { color: var(--white); background: var(--terracotta-deep); }
 .footer-bottom .footer-social { margin-top: 0; }
 
+/* v12 — WhatsApp-Community-Button (on-brand, Outline; Glyph macht ihn erkennbar) */
+.btn-whatsapp {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.btn-whatsapp:hover {
+  border-color: var(--accent-deep);
+  color: var(--accent-deep);
+  background: var(--accent-tint);
+}
+.btn-whatsapp svg { width: 1.2em; height: 1.2em; flex: none; }
+
 /* ============================================================
    Phase 2 — Plattform-Sneak-Peek (drei Screens als Mockups)
    ============================================================ */
