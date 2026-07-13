@@ -1585,7 +1585,7 @@ h2 { letter-spacing: -0.025em; }
   margin-top: var(--space-2xl);
 }
 @media (max-width: 760px) { .founder-row { grid-template-columns: 1fr; gap: var(--space-lg); } }
-.founder-photo--med { max-width: 300px; }
+.founder-photo--med { max-width: 230px; }
 .founder-photo--med img { object-position: 50% 30%; border-radius: 24px; }
 .founder-note p {
   font-size: clamp(1.1rem, 1.5vw, 1.3rem);
