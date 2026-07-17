@@ -33,9 +33,18 @@
 </script>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/experience.css">
 </head>
-<body>
+<body class="page-home">
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<!-- Preloader: der Koru zeichnet sich, die Seite atmet auf.
+     CSS-Sicherheitsnetz blendet ihn auch ohne JS nach 2,4s aus. -->
+<div class="xp-loader" aria-hidden="true">
+  <svg viewBox="0 0 120 120" fill="none">
+    <path class="xp-loader-path" d="M 12 72 C 18 30 56 8 86 20 C 110 30 116 60 98 75 C 82 88 58 81 55 62 C 53 47 68 38 78 46 C 86 53 83 64 73 65"/>
+  </svg>
+</div>
 
 <header class="site-header">
   <div class="container nav-row">
@@ -62,27 +71,29 @@
 
 <main id="main">
 
-  <!-- HERO (füllt den Viewport) -->
-  <section class="hero-home">
-    <div class="arc-deco hero-arc is-floating" aria-hidden="true">
-      <svg viewBox="0 0 200 200" fill="none"><path d="M150 44 A 66 66 0 1 0 168 96" stroke="currentColor" stroke-width="11" stroke-linecap="round"/></svg>
+  <!-- ============ HERO ============ -->
+  <section class="xp-hero">
+    <div class="xp-hero-arc" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none"><path class="xp-arc-path" d="M150 44 A 66 66 0 1 0 168 96" stroke="currentColor" stroke-width="10" stroke-linecap="round"/></svg>
     </div>
-    <div class="container hero-container">
-      <div class="hero-inner">
-        <p class="eyebrow">Community &amp; Recovery</p>
-        <h1><span class="hero-rotate" aria-label="Recover und Grow"><span class="hero-word">Recover</span></span> together.</h1>
-        <p class="hero-lead">Nach dem Krankenhaus beginnt der eigentliche Weg. Awhi begleitet brandverletzte Menschen und ihre Familien — durch jede Phase, ein Leben lang.</p>
-        <div class="hero-actions">
-          <a href="#newsletter" class="btn btn-accent">Jetzt anmelden</a>
-          <a href="mailto:info@awhii.com?subject=Beitrittsanfrage%20-%20Awhi%20WhatsApp%20Community&body=Hallo%20Awhi-Team%2C%20ich%20habe%20Interesse%20an%20der%20WhatsApp-Community%20und%20bitte%20um%20den%20Einladungslink.%20Danke%21" class="btn btn-whatsapp">
+    <div class="container xp-hero-container">
+      <div class="xp-hero-inner">
+        <p class="eyebrow xp-hero-eyebrow">Community &amp; Recovery</p>
+        <h1 class="xp-title">
+          <span class="xp-mask"><span class="xp-maskline"><span class="hero-rotate" aria-label="Recover und Grow"><span class="hero-word">Recover</span></span> together.</span></span>
+        </h1>
+        <p class="hero-lead xp-hero-lead" data-split>Nach dem Krankenhaus beginnt der eigentliche Weg. Awhi begleitet brandverletzte Menschen und ihre Familien — durch jede Phase, ein Leben lang.</p>
+        <div class="hero-actions xp-hero-actions">
+          <a href="#newsletter" class="btn btn-accent" data-magnetic>Jetzt anmelden</a>
+          <a href="mailto:info@awhii.com?subject=Beitrittsanfrage%20-%20Awhi%20WhatsApp%20Community&body=Hallo%20Awhi-Team%2C%20ich%20habe%20Interesse%20an%20der%20WhatsApp-Community%20und%20bitte%20um%20den%20Einladungslink.%20Danke%21" class="btn btn-whatsapp" data-magnetic>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23zm-4.53 4.4c-.15 0-.4.06-.61.28-.21.22-.8.78-.8 1.9s.82 2.2.93 2.36c.11.15 1.6 2.44 3.87 3.42.54.23.96.37 1.29.48.54.17 1.03.15 1.42.09.43-.06 1.34-.55 1.53-1.08.19-.53.19-.98.13-1.08-.06-.09-.21-.15-.44-.26-.23-.11-1.34-.66-1.55-.74-.21-.08-.36-.11-.51.11-.15.22-.58.74-.71.89-.13.15-.26.17-.49.06-.23-.11-.96-.35-1.83-1.13-.68-.6-1.13-1.35-1.27-1.57-.13-.22-.01-.34.1-.45.1-.1.23-.26.34-.39.11-.13.15-.22.23-.37.08-.15.04-.28-.02-.39-.06-.11-.51-1.24-.71-1.7-.18-.44-.37-.38-.51-.39-.13 0-.28-.01-.43-.01z"/></svg>
             WhatsApp-Community
           </a>
-          <a href="#why" class="text-link">Unsere Mission entdecken →</a>
+          <a href="#why" class="text-link xp-hero-textlink">Unsere Mission entdecken →</a>
         </div>
       </div>
     </div>
-    <a href="#newsletter" class="hero-scroll" aria-label="Weiter nach unten scrollen">
+    <a href="#why" class="hero-scroll xp-hero-scroll" aria-label="Weiter nach unten scrollen">
       <span class="hero-scroll-label">Mehr entdecken</span>
       <span class="hero-scroll-arrow" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="4" x2="12" y2="19"></line><polyline points="6 13 12 19 18 13"></polyline></svg>
@@ -90,17 +101,263 @@
     </a>
   </section>
 
-  <!-- FRÜHER NEWSLETTER-AUFRUF (zentriert) -->
-  <section id="newsletter">
+  <!-- ============ MISSION ============ -->
+  <section id="why" class="xp-mission">
+    <svg class="xp-line xp-line-mission" viewBox="0 0 80 640" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMin meet">
+      <path class="xp-line-path" d="M 40 0 C 40 110 16 170 26 290 C 36 410 62 470 40 640" vector-effect="non-scaling-stroke"/>
+    </svg>
     <div class="container">
-      <div class="cta-band center reveal">
-        <div class="arc-deco is-floating-slow" aria-hidden="true">
-          <svg viewBox="0 0 200 200" fill="none"><path d="M150 44 A 66 66 0 1 0 168 96" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></svg>
+      <div class="xp-mission-head">
+        <p class="eyebrow" data-xp-reveal>Unsere Mission</p>
+        <h2 class="xp-mission-h" data-xp-reveal>Betroffene, Familien und Fachleute — an einem Ort verbunden.</h2>
+        <p class="xp-mission-lead" data-emphasis>Ärzte, Psychologen und Therapeuten helfen — aber oft jeder für sich. Awhi bringt sie mit Betroffenen und Familien an einen Ort, schafft Struktur und begleitet durch jede Phase.</p>
+      </div>
+
+      <div class="xp-founder">
+        <figure class="xp-founder-photo" data-clip>
+          <img src="assets/img/founder.jpg" alt="Joshua Graute, Gründer von Awhi" width="800" height="800">
+          <figcaption class="founder-tag">Joshua Graute · Gründer</figcaption>
+        </figure>
+        <div class="xp-founder-note" data-xp-reveal>
+          <svg class="xp-founder-koru" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M 6 30 C 8 14 24 5 35 10 C 44 14 46 25 39 31 C 33 36 24 33 23 26 C 22 20 28 17 32 20" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+          <p>Joshua überlebte als Kleinkind einen schweren Hausbrand in Neuseeland und wuchs zwischen Klinik, Operationen und Alltag auf. Aus dieser Erfahrung gründete er Awhi — den Begleiter, den es damals nicht gab.</p>
         </div>
-        <div class="cta-band-inner">
-          <p class="eyebrow eyebrow-on-dark">Newsletter</p>
-          <h2>Sei von Anfang an dabei.</h2>
-          <p>Erfahre als Erstes, wenn Awhi startet, wirf einen Blick hinter die Kulissen des Aufbaus — und sichere dir die Chance, die Plattform als Testnutzer aktiv mitzugestalten.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHASEN-REISE ============ -->
+  <section id="what" class="xp-journey-sec">
+    <div class="container xp-journey-head">
+      <p class="eyebrow" data-xp-reveal>Woran wir arbeiten</p>
+      <h2 data-xp-reveal>Awhi entsteht in Phasen.</h2>
+      <p class="lead xp-journey-lead" data-xp-reveal>Wir stehen am Anfang — und bauen Awhi Schritt für Schritt auf. Scroll weiter und geh die Reise mit.</p>
+    </div>
+
+    <div class="xp-journey" data-journey>
+      <div class="xp-rail" aria-hidden="true">
+        <div class="container xp-rail-inner">
+          <button class="xp-rail-item is-active" type="button" data-index="0" aria-label="Zu Phase 1: Community"><span class="xp-rail-num">01</span><span class="xp-rail-title">Community</span></button>
+          <button class="xp-rail-item" type="button" data-index="1" aria-label="Zu Phase 2: Recovery-Plattform"><span class="xp-rail-num">02</span><span class="xp-rail-title">Recovery-Plattform</span></button>
+          <button class="xp-rail-item" type="button" data-index="2" aria-label="Zu Phase 3: Ressourcen und Netzwerk"><span class="xp-rail-num">03</span><span class="xp-rail-title">Ressourcen &amp; Netzwerk</span></button>
+          <button class="xp-rail-item" type="button" data-index="3" aria-label="Zu Phase 4: Kiwi"><span class="xp-rail-num">04</span><span class="xp-rail-title">Kiwi</span></button>
+          <span class="xp-rail-bar"><i></i></span>
+        </div>
+      </div>
+
+      <div class="xp-track">
+
+        <!-- Phase 1 -->
+        <article class="xp-panel">
+          <div class="container xp-panel-inner">
+            <p class="xp-kicker">Phase 01 · Community</p>
+            <div class="xp-panel-grid">
+              <div class="phase-panel-text">
+                <h3>Unsere Community ist gestartet.</h3>
+                <p>Der Anfang von Awhi ist die Gemeinschaft — und sie ist schon da: In unserer WhatsApp-Community kommen Betroffene und Familien in einem geschützten Rahmen zusammen, tauschen sich aus und begleiten einander.</p>
+                <ul class="phase-feature-list">
+                  <li>Aktive WhatsApp-Community für Betroffene und Familien</li>
+                  <li>Geschützter, direkter Austausch untereinander</li>
+                  <li>Newsletter mit Einblicken in den Aufbau</li>
+                </ul>
+                <a href="mailto:info@awhii.com?subject=Beitrittsanfrage%20-%20Awhi%20WhatsApp%20Community&body=Hallo%20Awhi-Team%2C%20ich%20habe%20Interesse%20an%20der%20WhatsApp-Community%20und%20bitte%20um%20den%20Einladungslink.%20Danke%21" class="btn btn-whatsapp xp-panel-cta" data-magnetic>
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23zm-4.53 4.4c-.15 0-.4.06-.61.28-.21.22-.8.78-.8 1.9s.82 2.2.93 2.36c.11.15 1.6 2.44 3.87 3.42.54.23.96.37 1.29.48.54.17 1.03.15 1.42.09.43-.06 1.34-.55 1.53-1.08.19-.53.19-.98.13-1.08-.06-.09-.21-.15-.44-.26-.23-.11-1.34-.66-1.55-.74-.21-.08-.36-.11-.51.11-.15.22-.58.74-.71.89-.13.15-.26.17-.49.06-.23-.11-.96-.35-1.83-1.13-.68-.6-1.13-1.35-1.27-1.57-.13-.22-.01-.34.1-.45.1-.1.23-.26.34-.39.11-.13.15-.22.23-.37.08-.15.04-.28-.02-.39-.06-.11-.51-1.24-.71-1.7-.18-.44-.37-.38-.51-.39-.13 0-.28-.01-.43-.01z"/></svg>
+                  Zur WhatsApp-Community
+                </a>
+              </div>
+              <div class="mini" aria-label="Beispielhafte Vorschau der Awhi-Community">
+                <div class="mini-head">
+                  <span class="mini-title">Community</span>
+                  <span class="mini-pill">Eltern-Gruppe</span>
+                </div>
+                <div class="mini-post">
+                  <span class="mini-av" style="--c:#c9a892">M</span>
+                  <div class="mini-body">
+                    <span class="mini-name">Marie <em>· vor 2 Std</em></span>
+                    <span class="mini-text">Welche Creme hat euch nach der Transplantation geholfen?</span>
+                    <span class="mini-meta">12 Antworten</span>
+                  </div>
+                </div>
+                <div class="mini-post">
+                  <span class="mini-av" style="--c:#b98c6f">T</span>
+                  <div class="mini-body">
+                    <span class="mini-name">Tom <em>· vor 5 Std</em></span>
+                    <span class="mini-text">Erster Schultag nach dem Unfall — danke für eure Tipps.</span>
+                    <span class="mini-meta">Antwort von einer Mentor-Familie</span>
+                  </div>
+                </div>
+                <span class="mini-foot">Beispielhafte Darstellung</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Phase 2 -->
+        <article class="xp-panel xp-panel--peek">
+          <div class="container xp-panel-inner">
+            <p class="xp-kicker">Phase 02 · Recovery-Plattform</p>
+            <div class="xp-panel-peekgrid">
+              <div class="phase-panel-text">
+                <h3>Die Recovery-Plattform als digitaler Begleiter.</h3>
+                <p>Wir arbeiten mit Hochdruck an der Plattform. Bald wählen wir erste Testnutzer aus, die die Entwicklung aktiv mitgestalten. Ein erster Blick auf drei zentrale Bereiche:</p>
+              </div>
+
+              <div class="peek-gallery" role="group" aria-label="Beispielhafte Screens der Awhi-Plattform">
+                <figure class="peek">
+                  <div class="peek-frame">
+                    <div class="peek-chrome" aria-hidden="true">
+                      <span class="peek-dots"><i></i><i></i><i></i></span>
+                      <span class="peek-url">Heute</span>
+                    </div>
+                    <div class="peek-screen peek-heute">
+                      <span class="peek-eyebrow">Mittwoch, 8. Juli</span>
+                      <h4 class="peek-h">Guten Morgen, Anna.</h4>
+                      <p class="peek-sub">Ihr seid in der Nachsorge — für Emil zählt heute ein Schritt.</p>
+                      <div class="peek-next">
+                        <div class="peek-next-text">
+                          <span class="peek-eyebrow accent">Euer nächster Schritt</span>
+                          <strong>Kompressionskleidung anpassen</strong>
+                          <span class="peek-actions"><span class="peek-btn">Zum Weg</span><span class="peek-btn ghost">Kiwi fragen</span></span>
+                        </div>
+                        <div class="peek-ring">
+                          <svg viewBox="0 0 44 44" aria-hidden="true">
+                            <circle cx="22" cy="22" r="18" fill="none" stroke="var(--terracotta-tint)" stroke-width="4"></circle>
+                            <circle cx="22" cy="22" r="18" fill="none" stroke="var(--terracotta)" stroke-width="4" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="61" transform="rotate(-90 22 22)"></circle>
+                          </svg>
+                          <span>6/13</span>
+                        </div>
+                      </div>
+                      <div class="peek-cardrow">
+                        <div class="peek-card"><span class="peek-clabel">Checklisten</span><span class="peek-cbody">Packliste &amp; Visite-Fragen</span></div>
+                        <div class="peek-card"><span class="peek-clabel">Community</span><span class="peek-cbody">3 neue Beiträge</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <figcaption class="peek-cap"><strong>Dein Tag im Blick</strong>Ein persönlicher Begleiter, der den nächsten Schritt kennt.</figcaption>
+                </figure>
+
+                <figure class="peek">
+                  <div class="peek-frame">
+                    <div class="peek-chrome" aria-hidden="true">
+                      <span class="peek-dots"><i></i><i></i><i></i></span>
+                      <span class="peek-url">Mein Weg</span>
+                    </div>
+                    <div class="peek-screen peek-weg">
+                      <span class="peek-eyebrow accent">Recovery-Weg</span>
+                      <h4 class="peek-h">Euer Weg — Schritt für Schritt.</h4>
+                      <div class="peek-track" aria-hidden="true">
+                        <div class="pt-seg done"><i></i><span>Akut</span></div>
+                        <div class="pt-seg done"><i></i><span>Reha</span></div>
+                        <div class="pt-seg current"><i></i><span>Nachsorge</span></div>
+                        <div class="pt-seg"><i></i><span>Alltag</span></div>
+                      </div>
+                      <div class="peek-steps">
+                        <div class="pstep done"><span class="pstep-dot">✓</span><span>Erstversorgung verstehen</span></div>
+                        <div class="pstep done"><span class="pstep-dot">✓</span><span>Reha-Plan durchgehen</span></div>
+                        <div class="pstep current"><span class="pstep-dot"></span><span>Kompressionskleidung anpassen</span></div>
+                        <div class="pstep"><span class="pstep-dot"></span><span>Narbenpflege-Routine aufbauen</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <figcaption class="peek-cap"><strong>Der Weg durch jede Phase</strong>Struktur statt Überforderung — ein Leben lang.</figcaption>
+                </figure>
+
+                <figure class="peek">
+                  <div class="peek-frame">
+                    <div class="peek-chrome" aria-hidden="true">
+                      <span class="peek-dots"><i></i><i></i><i></i></span>
+                      <span class="peek-url">Checklisten</span>
+                    </div>
+                    <div class="peek-screen peek-check">
+                      <span class="peek-eyebrow accent">Checklisten</span>
+                      <h4 class="peek-h">Fragen für die Visite</h4>
+                      <p class="peek-sub">Nach Themen sortiert — antworten &amp; abhaken.</p>
+                      <span class="peek-group">Behandlung &amp; nächste Schritte</span>
+                      <div class="pcheck done"><span class="pbox">✓</span><span>Wie tief ist die Verbrennung?</span></div>
+                      <div class="pcheck done"><span class="pbox">✓</span><span>Welche Behandlung ist als Nächstes geplant?</span></div>
+                      <div class="pcheck"><span class="pbox"></span><span>Steht eine OP an — und wann?</span></div>
+                      <span class="peek-group">Schmerzen &amp; Heilung</span>
+                      <div class="pcheck"><span class="pbox"></span><span>Wie werden Schmerzen behandelt?</span></div>
+                    </div>
+                  </div>
+                  <figcaption class="peek-cap"><strong>An alles gedacht</strong>Packliste, Visite-Fragen und mehr — abhakbar.</figcaption>
+                </figure>
+              </div>
+              <span class="dash-foot peek-foot">Beispielhafte Darstellung — Funktionen symbolisch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Phase 3 -->
+        <article class="xp-panel">
+          <div class="container xp-panel-inner">
+            <p class="xp-kicker">Phase 03 · Ressourcen &amp; Netzwerk</p>
+            <div class="xp-panel-grid">
+              <div class="phase-panel-text">
+                <h3>Verlässliche Ressourcen &amp; ein starkes Netzwerk.</h3>
+                <p>Rund um die Plattform entstehen die Werkzeuge, die im Alltag wirklich helfen — kuratiert und verständlich.</p>
+                <div class="feature-cluster">
+                  <div class="feature-chip"><span class="fc-icon" aria-hidden="true">✚</span>Ärztefinder</div>
+                  <div class="feature-chip"><span class="fc-icon" aria-hidden="true">◆</span>Wissensbibliothek</div>
+                  <div class="feature-chip"><span class="fc-icon" aria-hidden="true">◇</span>Austausch mit Betroffenen</div>
+                  <div class="feature-chip"><span class="fc-icon" aria-hidden="true">◈</span>Mentorenprogramme</div>
+                </div>
+              </div>
+              <div class="mini" aria-label="Beispielhafte Vorschau der Wissens- und Ärztesuche">
+                <div class="mini-search">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                  <span>Narbenpflege im ersten Jahr</span>
+                </div>
+                <div class="mini-row"><span class="mini-tag">Guide</span> Narbenpflege &amp; Sonnenschutz</div>
+                <div class="mini-row"><span class="mini-tag">Arzt</span> 2 Spezialisten in deiner Nähe</div>
+                <div class="mini-row"><span class="mini-tag">Mentor</span> Passende Familie gefunden</div>
+                <span class="mini-foot">Beispielhafte Darstellung</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Phase 4 -->
+        <article class="xp-panel">
+          <div class="container xp-panel-inner">
+            <p class="xp-kicker">Phase 04 · Kiwi</p>
+            <div class="xp-panel-grid">
+              <div class="phase-panel-text">
+                <h3>Kiwi — dein digitaler Begleiter.</h3>
+                <p>Kiwi ist unsere eigene KI: Sie beantwortet deine Fragen in verständlicher Sprache und verbindet Wissen, Community und die passenden nächsten Schritte — jederzeit, in deinem Tempo.</p>
+              </div>
+              <div class="kiwi-chat" aria-label="Beispielhafter Chat mit Kiwi">
+                <div class="kiwi-chat-head">
+                  <span class="kiwi-chat-badge">Kiwi</span>
+                  <span class="kiwi-chat-title">Kiwi<small>Dein digitaler Begleiter</small></span>
+                </div>
+                <div class="kc-row user">
+                  <span class="kc-bubble user">Worauf muss ich beim Pflegen frischer Narben achten?</span>
+                </div>
+                <div class="kc-row bot">
+                  <span class="kc-bubble bot">Halte die Narbe sauber und gut eingecremt, schütze sie konsequent vor Sonne (LSF 50+) und massiere sie sanft, sobald die Wunde verschlossen ist. Bei Rötung, Wärme oder Nässen bitte ärztlich abklären lassen.</span>
+                </div>
+                <span class="kc-foot">Beispielhafte Antwort — ersetzt keine ärztliche Beratung.</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER-FINALE ============ -->
+  <section id="newsletter" class="xp-finale">
+    <svg class="xp-finale-koru" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <path class="xp-finale-koru-path" d="M 20 120 C 30 50 92 13 142 33 C 182 50 190 100 160 125 C 133 147 93 135 88 103 C 84 78 109 63 126 76 C 139 87 134 106 117 107" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+    </svg>
+    <div class="container">
+      <div class="cta-band center xp-finale-band">
+        <div class="cta-band-inner xp-finale-inner">
+          <p class="eyebrow eyebrow-on-dark" data-xp-reveal>Newsletter</p>
+          <h2 class="xp-finale-h" data-xp-reveal>Sei von Anfang an dabei.</h2>
+          <p data-xp-reveal>Erfahre als Erstes, wenn Awhi startet, wirf einen Blick hinter die Kulissen des Aufbaus — und sichere dir die Chance, die Plattform als Testnutzer aktiv mitzugestalten.</p>
           <form class="signup-form cr_form cr_font" action="https://seu2.cleverreach.com/f/453112-429462/wcs/" method="post" target="_blank" data-signup-form novalidate>
             <div class="cr_form-component cr_form-component--email cr_ipe_item musthave">
               <label for="nl-email-1" style="position:absolute; left:-9999px;">E-Mail-Adresse</label>
@@ -117,281 +374,7 @@
             </div>
           </form>
           <p class="form-feedback" role="status" aria-live="polite"></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY -->
-  <section id="why">
-    <div class="container">
-      <div class="why-head reveal">
-        <p class="eyebrow">Unsere Mission</p>
-        <h2>Betroffene, Familien und Fachleute — an einem Ort verbunden.</h2>
-        <p class="why-lead">Ärzte, Psychologen und Therapeuten helfen — aber oft jeder für sich. Awhi bringt sie mit Betroffenen und Familien an einen Ort, schafft Struktur und begleitet durch jede Phase.</p>
-      </div>
-
-      <div class="founder-row reveal">
-        <div class="founder-photo founder-photo--med">
-          <div class="arc-frame" aria-hidden="true">
-            <svg viewBox="0 0 100 100" fill="none"><path d="M22 8 A 44 44 0 1 1 9 42" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg>
-          </div>
-          <img src="assets/img/founder.jpg" alt="Joshua Graute, Gründer von Awhi" width="800" height="800">
-          <span class="founder-tag">Joshua Graute · Gründer</span>
-        </div>
-        <div class="founder-note">
-          <p>Joshua überlebte als Kleinkind einen schweren Hausbrand in Neuseeland und wuchs zwischen Klinik, Operationen und Alltag auf. Aus dieser Erfahrung gründete er Awhi — den Begleiter, den es damals nicht gab.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT -->
-  <section id="what" class="section-alt">
-    <div class="container">
-      <div class="what-head reveal">
-        <p class="eyebrow">Woran wir arbeiten</p>
-        <h2>Awhi entsteht in Phasen.</h2>
-        <p class="lead">Wir stehen am Anfang — und bauen Awhi Schritt für Schritt auf.</p>
-      </div>
-
-      <div class="phases" data-phases>
-        <ol class="phases-track" role="tablist" aria-label="Entwicklungsphasen">
-          <li class="phase-item is-current is-active" data-phase="0" role="tab" tabindex="0" aria-selected="true">
-            <span class="phase-dot" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 19c.7-3.2 2.9-5 5.5-5s4.8 1.8 5.5 5"></path><path d="M16 5.2a3 3 0 0 1 0 5.6"></path><path d="M17.6 14.2c1.9.5 3.2 2.1 3.6 4.8"></path></svg>
-            </span>
-            <span class="phase-text">
-              <span class="phase-kicker">Phase 1</span>
-              <span class="phase-title">Community</span>
-            </span>
-          </li>
-          <li class="phase-item" data-phase="1" role="tab" tabindex="0" aria-selected="false">
-            <span class="phase-dot" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"></rect><path d="M10 5.5h4"></path><circle cx="12" cy="17.6" r="1"></circle></svg>
-            </span>
-            <span class="phase-text">
-              <span class="phase-kicker">Phase 2</span>
-              <span class="phase-title">Recovery-Plattform</span>
-            </span>
-          </li>
-          <li class="phase-item" data-phase="2" role="tab" tabindex="0" aria-selected="false">
-            <span class="phase-dot" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"></circle><circle cx="5" cy="18" r="2.2"></circle><circle cx="19" cy="18" r="2.2"></circle><path d="M10.7 6.7 6.4 15.8M13.3 6.7 17.6 15.8"></path></svg>
-            </span>
-            <span class="phase-text">
-              <span class="phase-kicker">Phase 3</span>
-              <span class="phase-title">Ressourcen &amp; Netzwerk</span>
-            </span>
-          </li>
-          <li class="phase-item" data-phase="3" role="tab" tabindex="0" aria-selected="false">
-            <span class="phase-dot" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.5L18 9l-4.3 1.5L12 15l-1.7-4.5L6 9l4.3-1.5z"></path><path d="M18 15l.8 1.9 1.9.8-1.9.8L18 20.4l-.8-1.9-1.9-.8 1.9-.8z"></path></svg>
-            </span>
-            <span class="phase-text">
-              <span class="phase-kicker">Phase 4</span>
-              <span class="phase-title">Kiwi</span>
-            </span>
-          </li>
-        </ol>
-
-        <div class="phases-detail">
-          <!-- Phase 1 -->
-          <div class="phase-panel is-active" data-panel="0">
-            <div class="phase-panel-text">
-              <h3>Unsere Community ist gestartet.</h3>
-              <p>Der Anfang von Awhi ist die Gemeinschaft — und sie ist schon da: In unserer WhatsApp-Community kommen Betroffene und Familien in einem geschützten Rahmen zusammen, tauschen sich aus und begleiten einander.</p>
-              <ul class="phase-feature-list">
-                <li>Aktive WhatsApp-Community für Betroffene und Familien</li>
-                <li>Geschützter, direkter Austausch untereinander</li>
-                <li>Newsletter mit Einblicken in den Aufbau</li>
-              </ul>
-              <a href="mailto:info@awhii.com?subject=Beitrittsanfrage%20-%20Awhi%20WhatsApp%20Community&body=Hallo%20Awhi-Team%2C%20ich%20habe%20Interesse%20an%20der%20WhatsApp-Community%20und%20bitte%20um%20den%20Einladungslink.%20Danke%21" class="btn btn-whatsapp" style="margin-top: var(--space-sm);">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23zm-4.53 4.4c-.15 0-.4.06-.61.28-.21.22-.8.78-.8 1.9s.82 2.2.93 2.36c.11.15 1.6 2.44 3.87 3.42.54.23.96.37 1.29.48.54.17 1.03.15 1.42.09.43-.06 1.34-.55 1.53-1.08.19-.53.19-.98.13-1.08-.06-.09-.21-.15-.44-.26-.23-.11-1.34-.66-1.55-.74-.21-.08-.36-.11-.51.11-.15.22-.58.74-.71.89-.13.15-.26.17-.49.06-.23-.11-.96-.35-1.83-1.13-.68-.6-1.13-1.35-1.27-1.57-.13-.22-.01-.34.1-.45.1-.1.23-.26.34-.39.11-.13.15-.22.23-.37.08-.15.04-.28-.02-.39-.06-.11-.51-1.24-.71-1.7-.18-.44-.37-.38-.51-.39-.13 0-.28-.01-.43-.01z"/></svg>
-                Zur WhatsApp-Community
-              </a>
-            </div>
-            <div class="mini" aria-label="Beispielhafte Vorschau der Awhi-Community">
-              <div class="mini-head">
-                <span class="mini-title">Community</span>
-                <span class="mini-pill">Eltern-Gruppe</span>
-              </div>
-              <div class="mini-post">
-                <span class="mini-av" style="--c:#c9a892">M</span>
-                <div class="mini-body">
-                  <span class="mini-name">Marie <em>· vor 2 Std</em></span>
-                  <span class="mini-text">Welche Creme hat euch nach der Transplantation geholfen?</span>
-                  <span class="mini-meta">12 Antworten</span>
-                </div>
-              </div>
-              <div class="mini-post">
-                <span class="mini-av" style="--c:#b98c6f">T</span>
-                <div class="mini-body">
-                  <span class="mini-name">Tom <em>· vor 5 Std</em></span>
-                  <span class="mini-text">Erster Schultag nach dem Unfall — danke für eure Tipps.</span>
-                  <span class="mini-meta">Antwort von einer Mentor-Familie</span>
-                </div>
-              </div>
-              <span class="mini-foot">Beispielhafte Darstellung</span>
-            </div>
-          </div>
-          <!-- Phase 2 (Plattform-Sneak-Peek: drei Screens) -->
-          <div class="phase-panel phase-panel--peek" data-panel="1">
-            <div class="phase-panel-text">
-              <h3>Die Recovery-Plattform als digitaler Begleiter.</h3>
-              <p>Wir arbeiten mit Hochdruck an der Plattform. Bald wählen wir erste Testnutzer aus, die die Entwicklung aktiv mitgestalten. Ein erster Blick auf drei zentrale Bereiche — so könnte dein Begleiter aussehen:</p>
-            </div>
-
-            <div class="peek-gallery" role="group" aria-label="Beispielhafte Screens der Awhi-Plattform">
-
-              <!-- Screen 1: Heute -->
-              <figure class="peek">
-                <div class="peek-frame">
-                  <div class="peek-chrome" aria-hidden="true">
-                    <span class="peek-dots"><i></i><i></i><i></i></span>
-                    <span class="peek-url">Heute</span>
-                  </div>
-                  <div class="peek-screen peek-heute">
-                    <span class="peek-eyebrow">Mittwoch, 8. Juli</span>
-                    <h4 class="peek-h">Guten Morgen, Anna.</h4>
-                    <p class="peek-sub">Ihr seid in der Nachsorge — für Emil zählt heute ein Schritt.</p>
-                    <div class="peek-next">
-                      <div class="peek-next-text">
-                        <span class="peek-eyebrow accent">Euer nächster Schritt</span>
-                        <strong>Kompressionskleidung anpassen</strong>
-                        <span class="peek-actions"><span class="peek-btn">Zum Weg</span><span class="peek-btn ghost">Kiwi fragen</span></span>
-                      </div>
-                      <div class="peek-ring">
-                        <svg viewBox="0 0 44 44" aria-hidden="true">
-                          <circle cx="22" cy="22" r="18" fill="none" stroke="var(--terracotta-tint)" stroke-width="4"></circle>
-                          <circle cx="22" cy="22" r="18" fill="none" stroke="var(--terracotta)" stroke-width="4" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="61" transform="rotate(-90 22 22)"></circle>
-                        </svg>
-                        <span>6/13</span>
-                      </div>
-                    </div>
-                    <div class="peek-cardrow">
-                      <div class="peek-card"><span class="peek-clabel">Checklisten</span><span class="peek-cbody">Packliste &amp; Visite-Fragen</span></div>
-                      <div class="peek-card"><span class="peek-clabel">Community</span><span class="peek-cbody">3 neue Beiträge</span></div>
-                    </div>
-                  </div>
-                </div>
-                <figcaption class="peek-cap"><strong>Dein Tag im Blick</strong>Ein persönlicher Begleiter, der den nächsten Schritt kennt.</figcaption>
-              </figure>
-
-              <!-- Screen 2: Mein Weg -->
-              <figure class="peek">
-                <div class="peek-frame">
-                  <div class="peek-chrome" aria-hidden="true">
-                    <span class="peek-dots"><i></i><i></i><i></i></span>
-                    <span class="peek-url">Mein Weg</span>
-                  </div>
-                  <div class="peek-screen peek-weg">
-                    <span class="peek-eyebrow accent">Recovery-Weg</span>
-                    <h4 class="peek-h">Euer Weg — Schritt für Schritt.</h4>
-                    <div class="peek-track" aria-hidden="true">
-                      <div class="pt-seg done"><i></i><span>Akut</span></div>
-                      <div class="pt-seg done"><i></i><span>Reha</span></div>
-                      <div class="pt-seg current"><i></i><span>Nachsorge</span></div>
-                      <div class="pt-seg"><i></i><span>Alltag</span></div>
-                    </div>
-                    <div class="peek-steps">
-                      <div class="pstep done"><span class="pstep-dot">✓</span><span>Erstversorgung verstehen</span></div>
-                      <div class="pstep done"><span class="pstep-dot">✓</span><span>Reha-Plan durchgehen</span></div>
-                      <div class="pstep current"><span class="pstep-dot"></span><span>Kompressionskleidung anpassen</span></div>
-                      <div class="pstep"><span class="pstep-dot"></span><span>Narbenpflege-Routine aufbauen</span></div>
-                    </div>
-                  </div>
-                </div>
-                <figcaption class="peek-cap"><strong>Der Weg durch jede Phase</strong>Struktur statt Überforderung — ein Leben lang.</figcaption>
-              </figure>
-
-              <!-- Screen 3: Checklisten -->
-              <figure class="peek">
-                <div class="peek-frame">
-                  <div class="peek-chrome" aria-hidden="true">
-                    <span class="peek-dots"><i></i><i></i><i></i></span>
-                    <span class="peek-url">Checklisten</span>
-                  </div>
-                  <div class="peek-screen peek-check">
-                    <span class="peek-eyebrow accent">Checklisten</span>
-                    <h4 class="peek-h">Fragen für die Visite</h4>
-                    <p class="peek-sub">Nach Themen sortiert — antworten &amp; abhaken.</p>
-                    <span class="peek-group">Behandlung &amp; nächste Schritte</span>
-                    <div class="pcheck done"><span class="pbox">✓</span><span>Wie tief ist die Verbrennung?</span></div>
-                    <div class="pcheck done"><span class="pbox">✓</span><span>Welche Behandlung ist als Nächstes geplant?</span></div>
-                    <div class="pcheck"><span class="pbox"></span><span>Steht eine OP an — und wann?</span></div>
-                    <span class="peek-group">Schmerzen &amp; Heilung</span>
-                    <div class="pcheck"><span class="pbox"></span><span>Wie werden Schmerzen behandelt?</span></div>
-                  </div>
-                </div>
-                <figcaption class="peek-cap"><strong>An alles gedacht</strong>Packliste, Visite-Fragen und mehr — abhakbar.</figcaption>
-              </figure>
-
-            </div>
-            <span class="dash-foot peek-foot">Beispielhafte Darstellung — Funktionen symbolisch</span>
-          </div>
-          <!-- Phase 3 -->
-          <div class="phase-panel" data-panel="2">
-            <div class="phase-panel-text">
-              <h3>Verlässliche Ressourcen &amp; ein starkes Netzwerk.</h3>
-              <p>Rund um die Plattform entstehen die Werkzeuge, die im Alltag wirklich helfen — kuratiert und verständlich.</p>
-              <div class="feature-cluster">
-                <div class="feature-chip"><span class="fc-icon" aria-hidden="true">✚</span>Ärztefinder</div>
-                <div class="feature-chip"><span class="fc-icon" aria-hidden="true">◆</span>Wissensbibliothek</div>
-                <div class="feature-chip"><span class="fc-icon" aria-hidden="true">◇</span>Austausch mit Betroffenen</div>
-                <div class="feature-chip"><span class="fc-icon" aria-hidden="true">◈</span>Mentorenprogramme</div>
-              </div>
-            </div>
-            <div class="mini" aria-label="Beispielhafte Vorschau der Wissens- und Ärztesuche">
-              <div class="mini-search">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
-                <span>Narbenpflege im ersten Jahr</span>
-              </div>
-              <div class="mini-row"><span class="mini-tag">Guide</span> Narbenpflege &amp; Sonnenschutz</div>
-              <div class="mini-row"><span class="mini-tag">Arzt</span> 2 Spezialisten in deiner Nähe</div>
-              <div class="mini-row"><span class="mini-tag">Mentor</span> Passende Familie gefunden</div>
-              <span class="mini-foot">Beispielhafte Darstellung</span>
-            </div>
-          </div>
-          <!-- Phase 4 -->
-          <div class="phase-panel" data-panel="3">
-            <div class="phase-panel-text">
-              <h3>Kiwi — dein digitaler Begleiter.</h3>
-              <p>Kiwi ist unsere eigene KI: Sie beantwortet deine Fragen in verständlicher Sprache und verbindet Wissen, Community und die passenden nächsten Schritte — jederzeit, in deinem Tempo.</p>
-            </div>
-            <div class="kiwi-chat" aria-label="Beispielhafter Chat mit Kiwi">
-              <div class="kiwi-chat-head">
-                <span class="kiwi-chat-badge">Kiwi</span>
-                <span class="kiwi-chat-title">Kiwi<small>Dein digitaler Begleiter</small></span>
-              </div>
-              <div class="kc-row user">
-                <span class="kc-bubble user">Worauf muss ich beim Pflegen frischer Narben achten?</span>
-              </div>
-              <div class="kc-row bot">
-                <span class="kc-bubble bot">Halte die Narbe sauber und gut eingecremt, schütze sie konsequent vor Sonne (LSF 50+) und massiere sie sanft, sobald die Wunde verschlossen ist. Bei Rötung, Wärme oder Nässen bitte ärztlich abklären lassen.</span>
-              </div>
-              <span class="kc-foot">Beispielhafte Antwort — ersetzt keine ärztliche Beratung.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WIEDERHOLTER NEWSLETTER-AUFRUF -->
-  <section>
-    <div class="container">
-      <div class="cta-band center reveal">
-        <div class="arc-deco is-floating-slow" aria-hidden="true">
-          <svg viewBox="0 0 200 200" fill="none"><path d="M150 44 A 66 66 0 1 0 168 96" stroke="currentColor" stroke-width="12" stroke-linecap="round"/></svg>
-        </div>
-        <div class="cta-band-inner">
-          <h2>Werde Teil von Awhi — von Anfang an.</h2>
-          <p>Wir bauen die erste Community- und Recovery-Plattform für brandverletzte Menschen und Familien im DACH-Raum.</p>
-          <div class="cta-actions">
-            <a href="#newsletter" class="btn btn-onbrand">Jetzt anmelden</a>
-          </div>
-          <a href="mailto:info@awhii.com" class="text-link text-link--onbrand">Lieber persönlich? Kontakt zu Awhi →</a>
+          <a href="mailto:info@awhii.com" class="text-link text-link--onbrand xp-finale-contact">Lieber persönlich? Kontakt zu Awhi →</a>
         </div>
       </div>
     </div>
@@ -399,7 +382,7 @@
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer xp-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
@@ -447,7 +430,9 @@
 
 <script src="assets/js/gsap.min.js"></script>
 <script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/experience.js"></script>
 <script>
 function loadjQuery(e,t){var n=document.createElement("script");n.setAttribute("src",e);n.onload=t;n.onreadystatechange=function(){if(this.readyState=="complete"||this.readyState=="loaded")t()};document.getElementsByTagName("head")[0].appendChild(n)}function main(){
 var $cr=jQuery.noConflict();var old_src;$cr(document).ready(function(){$cr(".cr_form").submit(function(){$cr(this).find('.clever_form_error').removeClass('clever_form_error');$cr(this).find('.clever_form_note').remove();$cr(this).find(".musthave").find('input, textarea').each(function(){if(jQuery.trim($cr(this).val())==""||($cr(this).is(':checkbox'))||($cr(this).is(':radio'))){if($cr(this).is(':checkbox')||($cr(this).is(':radio'))){if(!$cr(this).parents(".cr_ipe_item").find(":checked").is(":checked")){$cr(this).parents(".cr_ipe_item").addClass('clever_form_error')}}else{$cr(this).addClass('clever_form_error')}}});if($cr(this).attr("action").search(document.domain)>0&&$cr(".cr_form").attr("action").search("wcs")>0){var cr_email=$cr(this).find('input[name=email]');var unsub=false;if($cr("input['name=cr_subunsubscribe'][value='false']").length){if($cr("input['name=cr_subunsubscribe'][value='false']").is(":checked")){unsub=true}}if(cr_email.val()&&!unsub){$cr.ajax({type:"GET",url:$cr(".cr_form").attr("action").replace("wcs","check_email")+window.btoa($cr(this).find('input[name=email]').val()),success:function(data){if(data){cr_email.addClass('clever_form_error').before("<div class='clever_form_note cr_font'>"+data+"</div>");return false}},async:false})}var cr_captcha=$cr(this).find('input[name=captcha]');if(cr_captcha.val()){$cr.ajax({type:"GET",url:$cr(".cr_form").attr("action").replace("wcs","check_captcha")+$cr(this).find('input[name=captcha]').val(),success:function(data){if(data){cr_captcha.addClass('clever_form_error').after("<div  class='clever_form_note cr_font'>"+data+"</div>");return false}},async:false})}}if($cr(this).find('.clever_form_error').length){return false}return true});$cr('input[class*="cr_number"]').change(function(){if(isNaN($cr(this).val())){$cr(this).val(1)}if($cr(this).attr("min")){if(($cr(this).val()*1)<($cr(this).attr("min")*1)){$cr(this).val($cr(this).attr("min"))}}if($cr(this).attr("max")){if(($cr(this).val()*1)>($cr(this).attr("max")*1)){$cr(this).val($cr(this).attr("max"))}}});old_src=$cr("div[rel='captcha'] img:not(.captcha2_reload)").attr("src");if($cr("div[rel='captcha'] img:not(.captcha2_reload)").length!=0){captcha_reload()}});function captcha_reload(){var timestamp=new Date().getTime();$cr("div[rel='captcha'] img:not(.captcha2_reload)").attr("src","");$cr("div[rel='captcha'] img:not(.captcha2_reload)").attr("src",old_src+"?t="+timestamp);return false}
