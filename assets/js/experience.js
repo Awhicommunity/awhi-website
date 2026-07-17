@@ -326,6 +326,24 @@
     });
   }
 
+  /* ---------- Zahlen zählen hoch (Partner-Statistiken) ---------- */
+  document.querySelectorAll("[data-count]").forEach(function (el) {
+    var target = parseFloat(el.getAttribute("data-count"));
+    if (isNaN(target)) return;
+    var prefix = el.getAttribute("data-prefix") || "";
+    var state = { v: 0 };
+    el.textContent = prefix + "0";
+    gsap.to(state, {
+      v: target,
+      duration: 1.8,
+      ease: "power2.out",
+      scrollTrigger: { trigger: el, start: "top 86%", once: true },
+      onUpdate: function () {
+        el.textContent = prefix + Math.round(state.v).toLocaleString("de-DE");
+      }
+    });
+  });
+
   /* ---------- Footer: ruhiger Auftritt ---------- */
   var footerCols = document.querySelectorAll(".xp-footer .footer-grid > div");
   if (footerCols.length) {

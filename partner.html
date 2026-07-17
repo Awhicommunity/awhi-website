@@ -18,8 +18,9 @@
 <link rel="icon" type="image/png" href="assets/img/awhi-icon.png">
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/experience.css">
 </head>
-<body>
+<body class="page-partner">
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
 <header class="site-header">
@@ -50,14 +51,21 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero" style="padding-top: calc(var(--space-3xl) + 1.5rem); padding-bottom: var(--space-2xl);">
-    <div class="container" style="max-width: 56rem;">
-      <p class="eyebrow">Für Kliniken, Kostenträger &amp; Förderpartner</p>
-      <h1 style="font-size: clamp(2.25rem, 4.8vw, 3.9rem);">Behandlungserfolg endet nicht mit der Entlassung.</h1>
-      <p class="lead" style="max-width: 52ch;">Awhi verlängert die Versorgung über die Klinik hinaus: strukturierte Nachsorge, Peer Support und Orientierung — als digitale Ergänzung, nicht als Ersatz.</p>
-      <div class="hero-actions" style="margin-top: var(--space-lg);">
-        <a href="#kontakt" class="btn btn-accent">Awhi-Partner werden</a>
-        <a href="#ausgangslage" class="text-link">Die Ausgangslage ansehen →</a>
+  <section class="xp-hero xp-hero--partner">
+    <div class="xp-hero-arc" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none"><path class="xp-arc-path" d="M150 44 A 66 66 0 1 0 168 96" stroke="currentColor" stroke-width="10" stroke-linecap="round"/></svg>
+    </div>
+    <div class="container xp-hero-container">
+      <div class="xp-hero-inner">
+        <p class="eyebrow xp-hero-eyebrow">Für Kliniken, Kostenträger &amp; Förderpartner</p>
+        <h1 class="xp-title xp-title--partner">
+          <span class="xp-mask"><span class="xp-maskline">Behandlungserfolg endet nicht mit der Entlassung.</span></span>
+        </h1>
+        <p class="hero-lead xp-hero-lead" data-split>Awhi verlängert die Versorgung über die Klinik hinaus: strukturierte Nachsorge, Peer Support und Orientierung — als digitale Ergänzung, nicht als Ersatz.</p>
+        <div class="hero-actions xp-hero-actions">
+          <a href="#kontakt" class="btn btn-accent" data-magnetic>Awhi-Partner werden</a>
+          <a href="#ausgangslage" class="text-link">Die Ausgangslage ansehen →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -65,23 +73,23 @@
   <!-- AUSGANGSLAGE + ZAHLEN -->
   <section id="ausgangslage" class="section-alt">
     <div class="container">
-      <div class="reveal" style="max-width: 40rem;">
-        <p class="eyebrow">Die Ausgangslage</p>
-        <h2>Die medizinische Versorgung war nie besser. Die Begleitung danach fehlt.</h2>
-        <p class="lead" style="max-width:none;">Nach der Entlassung endet die strukturierte Begleitung — genau dann, wenn Jahre voller Fragen zu Nachsorge, Alltag, Schule und Psyche beginnen.</p>
+      <div style="max-width: 40rem;">
+        <p class="eyebrow" data-xp-reveal>Die Ausgangslage</p>
+        <h2 data-xp-reveal>Die medizinische Versorgung war nie besser. Die Begleitung danach fehlt.</h2>
+        <p class="lead xp-partner-lead" style="max-width:none;" data-emphasis>Nach der Entlassung endet die strukturierte Begleitung — genau dann, wenn Jahre voller Fragen zu Nachsorge, Alltag, Schule und Psyche beginnen.</p>
       </div>
 
       <div class="stats">
-        <div class="stat reveal">
-          <div class="stat-num">~2.000</div>
+        <div class="stat" data-xp-reveal>
+          <div class="stat-num" data-count="2000" data-prefix="~">~2.000</div>
           <p class="stat-label">Jedes Jahr werden in Deutschland rund 2.000 Menschen (1.500 Erwachsene, 500 Kinder) so schwer brandverletzt, dass eine Behandlung in einem spezialisierten Verbrennungszentrum notwendig wird. Für viele beginnt die eigentliche Herausforderung erst nach der Entlassung.<a href="#quelle-1" aria-label="Fußnote">¹</a></p>
         </div>
-        <div class="stat reveal">
-          <div class="stat-num">4</div>
+        <div class="stat" data-xp-reveal>
+          <div class="stat-num" data-count="4">4</div>
           <p class="stat-label">Im deutschsprachigen Raum engagieren sich vier etablierte Selbsthilfeorganisationen für Brandverletzte – mit Beratung, Austausch und wertvoller Aufklärungsarbeit. Ein strukturiertes Programm, das Betroffene durchgängig von der Akutphase bis zur gesellschaftlichen Reintegration begleitet, ist uns nach aktueller Recherche nicht bekannt.</p>
         </div>
-        <div class="stat reveal">
-          <div class="stat-num">7</div>
+        <div class="stat" data-xp-reveal>
+          <div class="stat-num" data-count="7">7</div>
           <p class="stat-label">Lebensphasen — von der Intensivstation bis ins Erwachsenenleben — begleitet Awhi.</p>
         </div>
       </div>
@@ -92,26 +100,26 @@
   <!-- FÜR WEN -->
   <section class="section-alt" aria-labelledby="fuerwen-heading">
     <div class="container">
-      <p class="eyebrow reveal">Für wen Awhi Wirkung schafft</p>
-      <h2 id="fuerwen-heading" class="reveal">Ein Ökosystem, das allen Beteiligten nützt.</h2>
+      <p class="eyebrow" data-xp-reveal>Für wen Awhi Wirkung schafft</p>
+      <h2 id="fuerwen-heading" data-xp-reveal>Ein Ökosystem, das allen Beteiligten nützt.</h2>
       <div class="grid grid-3" style="margin-top: var(--space-xl);">
-        <div class="card reveal">
+        <div class="card" data-xp-reveal>
           <h3 style="font-family: var(--font-body); font-size:1.2rem;">Kliniken &amp; Verbrennungszentren</h3>
           <p style="color:var(--ink-soft);">Strukturierte Nachsorge über die Entlassung hinaus — als digitale Ergänzung, ohne zusätzliche Kapazität zu binden.</p>
           <p class="card-impact"><span>Erwartete Wirkung</span>Entlastung des Sozialdienstes · bessere Orientierung · langfristige Begleitung</p>
         </div>
-        <div class="card reveal">
+        <div class="card" data-xp-reveal>
           <h3 style="font-family: var(--font-body); font-size:1.2rem;">Krankenkassen &amp; Versicherungen</h3>
           <p style="color:var(--ink-soft);">Kontinuierliche, präventive Begleitung, die psychosozialen Folgebelastungen früh entgegenwirkt.</p>
           <p class="card-impact"><span>Erwartete Wirkung</span>höhere Selbstwirksamkeit · mehr psychosoziale Stabilität · bessere Versorgungsergebnisse</p>
         </div>
-        <div class="card reveal">
+        <div class="card" data-xp-reveal>
           <h3 style="font-family: var(--font-body); font-size:1.2rem;">Stiftungen &amp; Förderpartner</h3>
           <p style="color:var(--ink-soft);">Ein Impact-Projekt mit klar definiertem Versorgungsziel und transparenter Wirkung.</p>
           <p class="card-impact"><span>Erwartete Wirkung</span>messbarer gesellschaftlicher Beitrag · Skalierung eines neuen Versorgungsansatzes</p>
         </div>
       </div>
-      <ul class="evidence-list reveal">
+      <ul class="evidence-list" data-xp-reveal>
         <li>Belastbare Outcome-Daten erheben wir datenschutzkonform ab dem ersten Pilot — transparent und wissenschaftlich begleitet.</li>
       </ul>
     </div>
@@ -120,26 +128,26 @@
   <!-- WAS WIR BRAUCHEN -->
   <section id="bedarf" aria-labelledby="bedarf-heading">
     <div class="container">
-      <p class="eyebrow reveal">Support</p>
-      <h2 id="bedarf-heading" class="reveal">Was wir in dieser Phase brauchen.</h2>
-      <p class="lead reveal">Awhi entsteht gerade. Damit die nächsten Schritte gelingen, suchen wir konkret:</p>
+      <p class="eyebrow" data-xp-reveal>Support</p>
+      <h2 id="bedarf-heading" data-xp-reveal>Was wir in dieser Phase brauchen.</h2>
+      <p class="lead" data-xp-reveal>Awhi entsteht gerade. Damit die nächsten Schritte gelingen, suchen wir konkret:</p>
       <div class="grid grid-4" style="margin-top: var(--space-xl);">
-        <div class="need-card reveal">
+        <div class="need-card" data-xp-reveal>
           <span class="need-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8l8-5 8 5v13"></path><path d="M9 21v-6h6v6"></path></svg></span>
           <h3>Zugang zu Kliniken</h3>
           <p>Pilotstationen und Verbrennungszentren, die Awhi gemeinsam mit ihren Familien erproben.</p>
         </div>
-        <div class="need-card reveal">
+        <div class="need-card" data-xp-reveal>
           <span class="need-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 8a4 4 0 0 0-4 4v2a4 4 0 0 0 8 0v-2a4 4 0 0 0-4-4z"></path><path d="M5 20a7 7 0 0 1 14 0"></path></svg></span>
           <h3>Fachexperten</h3>
           <p>Ärzte, Psychologen und Therapeuten für Inhalte und einen fachlichen Beirat.</p>
         </div>
-        <div class="need-card reveal">
+        <div class="need-card" data-xp-reveal>
           <span class="need-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 8h7a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h9"></path></svg></span>
           <h3>Förderung</h3>
           <p>Stiftungen, öffentliche Programme und CSR-Partner für den Aufbau.</p>
         </div>
-        <div class="need-card reveal">
+        <div class="need-card" data-xp-reveal>
           <span class="need-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 19c.7-3.2 2.9-5 5.5-5s4.8 1.8 5.5 5"></path><path d="M16 5.2a3 3 0 0 1 0 5.6"></path><path d="M17.6 14.2c1.9.5 3.2 2.1 3.6 4.8"></path></svg></span>
           <h3>Betroffene &amp; Familien</h3>
           <p>Als Testnutzer, die die Plattform von Anfang an mitgestalten.</p>
@@ -151,11 +159,11 @@
   <!-- KONTAKT -->
   <section id="kontakt" class="section-alt">
     <div class="container" style="max-width: 660px;">
-      <p class="eyebrow reveal">Werde Awhi-Partner</p>
-      <h2 class="reveal">Sprechen wir über eine Zusammenarbeit.</h2>
-      <p class="lead reveal" style="max-width:none;">Ob Klinik, Kostenträger, Fachexperte oder Förderpartner — schreib uns, wo du ansetzen möchtest. Wir melden uns innerhalb von 2 Werktagen.</p>
+      <p class="eyebrow" data-xp-reveal>Werde Awhi-Partner</p>
+      <h2 data-xp-reveal>Sprechen wir über eine Zusammenarbeit.</h2>
+      <p class="lead" data-xp-reveal style="max-width:none;">Ob Klinik, Kostenträger, Fachexperte oder Förderpartner — schreib uns, wo du ansetzen möchtest. Wir melden uns innerhalb von 2 Werktagen.</p>
 
-      <form class="form-light reveal" data-contact-form style="margin-top: var(--space-lg);" novalidate>
+      <form class="form-light" data-xp-reveal data-contact-form style="margin-top: var(--space-lg);" novalidate>
         <div class="grid grid-2" style="gap: var(--space-md);">
           <div>
             <label for="p-name">Name</label>
@@ -185,13 +193,13 @@
         <button type="submit" class="btn btn-accent" style="margin-top: var(--space-sm);">Anfrage senden</button>
         <p class="form-feedback" role="status" aria-live="polite" style="color: var(--accent-deep);"></p>
       </form>
-      <p class="stats-note reveal">Lieber direkt? <a href="mailto:info@awhii.com" style="color:var(--accent-deep); font-weight:600;">info@awhii.com</a></p>
+      <p class="stats-note" data-xp-reveal>Lieber direkt? <a href="mailto:info@awhii.com" style="color:var(--accent-deep); font-weight:600;">info@awhii.com</a></p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer xp-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
@@ -239,6 +247,8 @@
 
 <script src="assets/js/gsap.min.js"></script>
 <script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/experience.js"></script>
 </body>
 </html>
