@@ -10,6 +10,7 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var isTouch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
   var hasGsap = typeof gsap !== "undefined";
   var hasST = typeof ScrollTrigger !== "undefined";
   var loader = document.querySelector(".xp-loader");
@@ -29,27 +30,35 @@
 
   if (hasST) gsap.registerPlugin(ScrollTrigger);
 
-  /* ---------- Smooth Scroll (Lenis) ---------- */
+  /* ---------- Smooth Scroll (Lenis) ----------
+     Nur auf Geräten mit Maus/Trackpad: Touch-Scrolling ist nativ bereits
+     butterweich (eigenes Momentum) — synthetisches Smoothing obendrauf
+     konkurriert damit und macht mobil spürbar träge/ruckelig. */
   var lenis = null;
-  if (typeof Lenis !== "undefined") {
+  if (!isTouch && typeof Lenis !== "undefined") {
     lenis = new Lenis({ lerp: 0.11, wheelMultiplier: 1, touchMultiplier: 1.4 });
     lenis.on("scroll", function () { if (hasST) ScrollTrigger.update(); });
     gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
     gsap.ticker.lagSmoothing(0);
-
-    /* Anker sanft anfahren */
-    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-      a.addEventListener("click", function (e) {
-        var id = a.getAttribute("href");
-        if (id.length < 2) return;
-        var target = document.querySelector(id);
-        if (!target) return;
-        e.preventDefault();
-        lenis.scrollTo(target, { offset: -64, duration: 1.4 });
-        history.replaceState(null, "", id);
-      });
-    });
   }
+
+  /* Anker sanft anfahren (Lenis auf Desktop, natives smooth scroll auf Touch) */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var id = a.getAttribute("href");
+      if (id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      if (lenis) {
+        lenis.scrollTo(target, { offset: -64, duration: 1.4 });
+      } else {
+        var y = target.getBoundingClientRect().top + window.scrollY - 64;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+      history.replaceState(null, "", id);
+    });
+  });
 
   function scrollToY(y) {
     if (lenis) lenis.scrollTo(y, { duration: 1.2 });

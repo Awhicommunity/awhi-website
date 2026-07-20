@@ -96,6 +96,17 @@ html.lenis, html.lenis body { height: auto; }
 .xp-mask { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
 .xp-maskline { display: inline-block; will-change: transform; }
 
+/* Startseiten-Hero: "Recover together." mit rotierendem Wort bleibt immer in einer
+   Zeile — ein Umbruch würde die Wort-Rotation (Breiten-Animation in main.js) zerreißen.
+   Schriftgröße folgt daher primär der Viewport-Breite, nicht der generischen Untergrenze. */
+.xp-hero:not(.xp-hero--partner) .xp-maskline { white-space: nowrap; }
+@media (max-width: 640px) {
+  .xp-hero:not(.xp-hero--partner) .xp-title { font-size: clamp(1.65rem, 8.6vw, 2.75rem); letter-spacing: -0.02em; }
+}
+@media (max-width: 360px) {
+  .xp-hero:not(.xp-hero--partner) .xp-title { font-size: 7.9vw; }
+}
+
 .xp-hero-lead {
   font-size: clamp(1.1rem, 1.7vw, 1.4rem);
   line-height: 1.55;
