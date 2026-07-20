@@ -145,6 +145,12 @@ html.lenis, html.lenis body { height: auto; }
   line-height: 1.05;
 }
 .xp-hero--partner .xp-hero-inner { padding-block: 8rem 4rem; }
+@media (max-width: 640px) {
+  .xp-title--partner { font-size: clamp(1.85rem, 8.2vw, 2.75rem); max-width: 15ch; }
+}
+/* Sicherheitsnetz: lange, ungetrennte Wörter (z.B. "Behandlungserfolg") dürfen die
+   überlaufversteckte Maske nie rechts abschneiden — nötigenfalls sauber trennen. */
+.xp-title { overflow-wrap: break-word; hyphens: auto; }
 
 /* Partner: Ausgangslage-Lead mit Wort-Emphase */
 .xp-partner-lead {
